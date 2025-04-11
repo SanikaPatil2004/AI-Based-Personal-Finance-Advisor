@@ -1,6 +1,8 @@
 import numpy as np
 import random
 import json
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 
 import torch
 import torch.nn as nn
