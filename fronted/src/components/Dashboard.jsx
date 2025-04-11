@@ -240,33 +240,33 @@ export default function Dashboard() {
   };
 
   // Handle user message send
-  const sendMessage = async () => {
-    if (!chatInput.trim()) return;
+  // const sendMessage = async () => {
+  //   if (!chatInput.trim()) return;
 
-    // Add user message to state
-    const userMessage = { name: "User", message: chatInput };
-    setChatMessages(prevMessages => [...prevMessages, userMessage]);
+  //   // Add user message to state
+  //   const userMessage = { name: "User", message: chatInput };
+  //   setChatMessages(prevMessages => [...prevMessages, userMessage]);
 
-    try {
-      // const response = await fetch("https://your-flask-chatbot.onrender.com/predict",{
+  //   try {
+  //     // const response = await fetch("https://your-flask-chatbot.onrender.com/predict",{
 
-      const response = await fetch("http://localhost:5001/predict", {
-      // fetch("http://127.0.0.1:5000/predict", {
-        method: "POST",
-        body: JSON.stringify({ message: chatInput }),
-        headers: { "Content-Type": "application/json" },
-      });
+  //     const response = await fetch("http://localhost:5001/predict", {
+  //     // fetch("http://127.0.0.1:5000/predict", {
+  //       method: "POST",
+  //       body: JSON.stringify({ message: chatInput }),
+  //       headers: { "Content-Type": "application/json" },
+  //     });
 
-      const data = await response.json();
-      const botMessage = { name: "Bot", message: data.answer };
+  //     const data = await response.json();
+  //     const botMessage = { name: "Bot", message: data.answer };
 
-      setChatMessages(prevMessages => [...prevMessages, botMessage]);
-    } catch (error) {
-      console.error("Chatbot error:", error);
-    }
+  //     setChatMessages(prevMessages => [...prevMessages, botMessage]);
+  //   } catch (error) {
+  //     console.error("Chatbot error:", error);
+  //   }
 
-    setChatInput(""); // Clear input field
-  };
+  //   setChatInput(""); // Clear input field
+  // };
 
   return (
     <div className="min-h-screen flex flex-col bg-[#121826] text-white">
