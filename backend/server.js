@@ -111,44 +111,6 @@ app.get("/auth-status", (req, res) => {
     res.json({ authenticated: false });
   }
 });
-
-// // ✅ Expense Schema
-// const expenseSchema = new mongoose.Schema({
-//   title: String,
-//   amount: Number,
-//   category: String,
-//   date: String,
-//   userEmail: String,
-// });
-
-// const Expense = mongoose.model("Expense", expenseSchema);
-
-// // ✅ Add Expense
-// app.post("/api/expenses", async (req, res) => {
-//   try {
-//     const { title, amount, category, date, userEmail } = req.body;
-
-//     if (!title || !amount || !category || !date || !userEmail) {
-//       return res.status(400).json({ message: "All fields are required" });
-//     }
-
-//     const newExpense = new Expense({ title, amount, category, date, userEmail });
-//     await newExpense.save();
-
-//     res.status(201).json({ message: "Expense added successfully!" });
-//   } catch (error) {
-//     console.error("❌ Error adding expense:", error);
-//     res.status(500).json({ message: "Internal Server Error" });
-//   }
-// });
-
-// // ✅ Fetch Expenses for User
-// app.get("/api/expenses", async (req, res) => {
-//   const { email } = req.query;
-//   const expenses = await Expense.find({ userEmail: email });
-//   res.json(expenses);
-// });
-
 // Expense Schema
 const ExpenseSchema = new mongoose.Schema({
   title: String,
