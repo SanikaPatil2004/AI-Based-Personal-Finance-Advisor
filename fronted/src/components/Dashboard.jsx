@@ -248,6 +248,7 @@ export default function Dashboard() {
     setChatMessages(prevMessages => [...prevMessages, userMessage]);
 
     try {
+      
       const response = await fetch("http://localhost:5001/predict", {
       // fetch("http://127.0.0.1:5000/predict", {
         method: "POST",
