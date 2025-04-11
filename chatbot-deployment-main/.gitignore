@@ -1,0 +1,10 @@
+# Node.js dependencies
+node_modules/
+.env
+package-lock.json
+
+# Python dependencies
+__pycache__/
+venv/
+*.pyc
+instance/

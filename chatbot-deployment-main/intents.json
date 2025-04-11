@@ -1,0 +1,87 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "budgeting",
+      "patterns": [
+        "How do I make a budget?",
+        "Help me create a monthly budget",
+        "I want to track my spending",
+        "How can I manage my income?"
+      ],
+      "responses": [
+        "Start by listing your income and expenses. Categorize your spending and set limits for each category.",
+        "Use an expense tracker to log your daily spending and adjust your budget monthly for better control."
+      ]
+    },
+    {
+      "tag": "saving",
+      "patterns": [
+        "How can I save more money?",
+        "Tips for saving money",
+        "How to reduce expenses?",
+        "How can I increase my savings?"
+      ],
+      "responses": [
+        "Try cutting down unnecessary expenses, set savings goals, and use automation to move money to your savings account regularly.",
+        "Create a shopping list before buying, compare prices, and avoid impulse spending."
+      ]
+    },
+    {
+      "tag": "investment",
+      "patterns": [
+        "Where should I invest money?",
+        "Best way to invest?",
+        "Investment tips?",
+        "Safe investment options?"
+      ],
+      "responses": [
+        "Diversify your investments between fixed deposits, mutual funds, and stocks based on your risk appetite.",
+        "Consider consulting a financial advisor for long-term investment strategies suited to your goals."
+      ]
+    },
+    {
+      "tag": "expense_tracking",
+      "patterns": [
+        "Track my expenses",
+        "How can I view my expenses?",
+        "Show me expense history",
+        "Where is my money going?"
+      ],
+      "responses": [
+        "You can use the expense tracker to view and analyze your spending by category or date.",
+        "Download your expenses as an Excel file to get a better overview and analyze trends."
+      ]
+    }
+  ]
+}
