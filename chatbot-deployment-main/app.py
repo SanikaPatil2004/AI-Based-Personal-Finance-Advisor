@@ -6,11 +6,14 @@ from chat import get_response
 
 app=Flask(__name__)
 CORS(app)
-CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins for testing
+
 
 @app.get("/")
+@app.get("/")
 def index_get():
-    return render_template("Dashboard.jsx")
+    return jsonify({"message": "Flask API is running!"})
+
 
 
 @app.post("/predict")
@@ -24,7 +27,10 @@ def predict():
 if __name__ == "__main__":
     # app.run(debug=True)
     # app.run(port=5001, debug=True)
-      app.run(host="0.0.0.0", port=5001)
+      if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Get PORT from Render
+    app.run(host="0.0.0.0", port=port, debug=True)
+
     #app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5001)))
 
 
