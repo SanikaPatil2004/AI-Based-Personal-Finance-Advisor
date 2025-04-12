@@ -3,6 +3,8 @@ import random
 import json
 import nltk
 nltk.download('punkt')
+nltk.download('omw-1.4')
+nltk.download('punkt_tab')  # Try this if needed
 
 
 import torch
